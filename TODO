@@ -17,6 +17,13 @@ XTerm*VT100.Translations: #override \
       Shift<Btn1Up>: select-end(CLIPBOARD) \n\
 
 
+/// https://www.reddit.com/r/linux/comments/1k57a5/xterm_replacement_so_many_alternatives_but_which/?st=j2uaoptx&sh=8864dcd6
+
+Terminal:
+  Saruka - https://launchpad.net/sakura, much simpler... Copy-paste works
+
+  rxvt-unicode-256color
+
 Tmux
 
 Gedit

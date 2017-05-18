@@ -6,7 +6,24 @@ build:
 		-t mindreframer/ubuntu-xfce-vnc \
 		.
 
+
+build-small:
+	docker build \
+		-f Dockerfile.ubuntu.xfce.small \
+		-t mindreframer/ubuntu-xfce-small \
+		.
+
 start:
+	docker run  \
+		-d \
+		--rm \
+		--user 0 \
+		-p 5901:5901 \
+		-v ${ROOT_DIR}:/app \
+		-e VNC_RESOLUTION=1280x800 \
+		mindreframer/ubuntu-xfce-vnc
+
+start-small:
 	docker run  \
 		-d \
 		--rm \
@@ -15,7 +32,7 @@ start:
 		-p 6901:6901 \
 		-v ${ROOT_DIR}:/app \
 		-e VNC_RESOLUTION=1280x800 \
-		mindreframer/ubuntu-xfce-vnc
+		mindreframer/ubuntu-xfce-small
 
 start-original:
 	docker run  \

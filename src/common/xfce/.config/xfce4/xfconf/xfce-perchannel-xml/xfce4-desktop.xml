@@ -24,7 +24,7 @@
           <property name="image-style" type="int" value="4"/>
           <property name="last-image" type="string" value="/headless/.config/04.lightcircles.jpeg"/>
         </property>
-        <property name="image-path" type="string" value="/headless/.config/05.stripes.jpeg"/>
+        <property name="image-path" type="string" value="/headless/.config/01.ocean.jpeg"/>
         <property name="image-show" type="bool" value="true"/>
         <property name="image-style" type="int" value="0"/>
       </property>
