@@ -54,6 +54,7 @@ RUN $INST_SCRIPTS/custom/tools.sh
 
 ### install custom configs
 ADD ./src/custom/config/xterm/XTerm $HOME
+ADD ./src/custom/config/rxvt/Xdefaults $HOME/.Xdefaults
 
 ### configure startup
 RUN $INST_SCRIPTS/ubuntu/libnss_wrapper.sh
