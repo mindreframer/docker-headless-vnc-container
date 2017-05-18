@@ -3,6 +3,7 @@
 set -e
 
 
-apt-get install sakura -y # terminal
+# apt-get install sakura -y # terminal
 
+apt-get install rxvt-unicode-256color -y
 apt-get install git-core -y
