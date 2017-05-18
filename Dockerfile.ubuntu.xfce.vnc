@@ -60,6 +60,8 @@ RUN $INST_SCRIPTS/set_user_permission.sh $STARTUPDIR $HOME
 ADD ./src/custom/install $INST_SCRIPTS
 RUN find $INST_SCRIPTS -name '*.sh' -exec chmod a+x {} +
 RUN $INST_SCRIPTS/golang.sh
+
+### adjust configs
 ADD ./src/custom/config/xterm/XTerm $HOME
 
 USER 1984
