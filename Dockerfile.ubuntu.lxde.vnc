@@ -12,11 +12,11 @@ RUN apt-get update \
           xfonts-75dpi-transcoded xfonts-base \
  && rm -rf /var/lib/apt/lists/*
 
-COPY assets/install /opt/install
+ADD assets/install /opt/install
 RUN chmod 755 /opt/install
 RUN /opt/install
 
-COPY assets/init /opt/init
+ADD assets/init /opt/init
 RUN chmod 755 /opt/init
 
 VOLUME ["/home/vnc/share"]
