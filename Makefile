@@ -6,12 +6,25 @@ build:
 		-t mindreframer/ubuntu-xfce-vnc \
 		.
 
+build-lubuntu:
+	docker build \
+		-f Dockerfile.ubuntu.lxde.vnc \
+		-t mindreframer/lubuntu-vnc \
+		.
 
 build-small:
 	docker build \
 		-f Dockerfile.ubuntu.xfce.small \
 		-t mindreframer/ubuntu-xfce-small \
 		.
+
+start-lubuntu:
+	docker run  \
+		-d \
+		--rm \
+		-p 5901:5901 \
+		-v ${ROOT_DIR}:/app \
+		mindreframer/lubuntu-vnc
 
 start:
 	docker run  \
